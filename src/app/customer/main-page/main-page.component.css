@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arima", cursive;
+}
+html {
+  height: 100vh;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+body {
+  background-color: #d61c4e;
+}
+nav {
+  background-color: #293462;
+  height: 10vh;
+}
+
+nav a {
+  color: #fff !important;
+}
+
+.movie-tag {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 25rem;
+  margin: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #eeeeee;
+  color: #000;
+  height: auto;
+  padding: 20px;
+}
+.movie-name {
+  font-size: 20px;
+}
+.card img {
+  height: 450px;
+  width: auto;
+  margin: 10px;
+}
+.checked {
+  color: yellowgreen;
+}
+#font-in {
+  position: relative;
+}
+.fa-search {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+p {
+  font-weight: bolder;
+  font-size: 15px;
+}

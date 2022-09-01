@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arima", cursive;
+}
+.log {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-tag {
+  background-color: #f5eddc;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav a {
+  color: #fff !important;
+}
+h1 {
+  color: #495c83;
+  font-weight: bolder;
+  padding: 10px;
+}
+label {
+  font-size: 20px;
+}
+input {
+  padding: 20px;
+  height: 30px;
+  width: 100%;
+}
+button,
+input {
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 0;
+}
+button {
+  width: 50%;
+  height: 30px;
+  background-color: #d9f8c4;
+}
+button:hover {
+  background-color: red;
+  color: white;
+}
+nav {
+  background-color: #293462;
+  height: auto;
+  color: white;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+nav a {
+  padding: 10px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}

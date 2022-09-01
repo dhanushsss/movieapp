@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arima", cursive;
+}
+
+.main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub {
+  padding: 40px;
+  background-color: #f2ebe9;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img{
+    margin: 5px;
+}
+h3{
+    margin: 5px;
+}

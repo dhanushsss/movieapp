@@ -1,0 +1,116 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class="container col-4">
+  <h3 class="text-center">Add Movies</h3>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          placeholder="title"
+          name="title"
+          [(ngModel)]="movie.title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="cast">Cast</label>
+        <input
+          type="text"
+          class="form-control"
+          id="cast"
+          aria-describedby="emailHelp"
+          placeholder="cast"
+          name="cast"
+          [(ngModel)]="movie.cast"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input
+          type="Date"
+          class="form-control"
+          id="date"
+          aria-describedby="emailHelp"
+          placeholder="date "
+          name="date"
+          [(ngModel)]="movie.date"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="totalTicket">Total Ticket</label>
+        <input
+          type="text"
+          class="form-control"
+          id="totalTicket"
+          aria-describedby="emailHelp"
+          placeholder="totalTicket "
+          name="totalTicket"
+          [(ngModel)]="movie.totalTicket"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language</label>
+        <input
+          type="text"
+          class="form-control"
+          id="language"
+          aria-describedby="emailHelp"
+          placeholder="language "
+          name="language"
+          [(ngModel)]="movie.language"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          aria-describedby="emailHelp"
+          placeholder="price"
+          name="price"
+          [(ngModel)]="movie.price"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="showTime">Show Time</label>
+        <input
+          type="text"
+          class="form-control"
+          id="showTime"
+          aria-describedby="emailHelp"
+          placeholder="showTime"
+          name="showTime"
+          [(ngModel)]="movie.showTime"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="image">Banner Image</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          aria-describedby="emailHelp"
+          placeholder="image"
+          name="image"
+          [(ngModel)]="movie.image"
+          required
+        />
+      </div>
+
+      <button type="submit" (click)="addMovie()">Submit</button>
+    </form>
+  </div>
+</div>

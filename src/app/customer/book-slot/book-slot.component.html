@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="main">
+  <div class="sub" *ngIf="movie">
+    <h1>Overview</h1>
+    <img style="height: 200px; width: 200px" src="{{ movie.image }}" alt="" />
+    <h3>Theatre Name : {{ movie.theatre.theatreName }}</h3>
+    <h3>Movie Name : {{ movie.title }}</h3>
+    <h3>Price : {{ movie.price }}</h3>
+    <h3>Show Time : {{ movie.showTime }}</h3>
+    <h3>Language : {{ movie.language }}</h3>
+    <h3>Language : {{ movie.date }}</h3>
+    <form (ngSubmit)="saveTotalCost()">
+      <label>Total Number of ticket </label>
+      <input
+        type="number"
+        name="totalTicket"
+        id="totalNoTicket"
+        placeholder="Total No Ticket"
+        [(ngModel)]="book.totalNoTicket"
+      /><br />
+      <button>Next</button>
+    </form>
+
+
+    <div>
+      <h1>{{priceCalc()}}</h1>
+    </div>
+  </div>
+</div>

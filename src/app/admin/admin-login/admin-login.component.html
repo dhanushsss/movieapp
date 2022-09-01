@@ -1,0 +1,62 @@
+<app-nav-bar></app-nav-bar>
+<div class="row">
+  <div
+    class="col-md-12 wrapper d-flex justify-content-center align-items-center"
+    style="height: 95vh"
+  >
+    <div class="row d-flex justify-content-center align-items-center hel">
+      <form #loginform="ngForm" (ngSubmit)="loginUser()">
+        <h1 class="text-align">Login</h1>
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail4"
+          placeholder="Email"
+          [(ngModel)]="theatre.theatreEmail"
+          name="theatreEmail"
+          form
+          required
+          pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$"
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
+        />
+        <div *ngIf="email.errors && email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.['required']"
+            >Email is required</small
+          >
+          <small class="text-danger" *ngIf="email.errors?.['pattern']"
+            >Enter the valid email
+          </small>
+        </div>
+        <br />
+        <input
+          id="Password"
+          name="Password"
+          placeholder="Password"
+          class="form-control"
+          required="required"
+          type="password"
+          [(ngModel)]="theatre.password"
+          name="password"
+          required
+          minlength="6"
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+        />
+        <small
+          class="text-danger"
+          [class.d-none]="password.valid || password.untouched"
+          >Password is required</small
+        >
+        <br />
+        <div class="but">
+          <button type="submit">Login</button><br />
+          <button routerLink="/theatre-signup" type="submit">Signup</button
+          ><br />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- *ngIf="theatre" -->

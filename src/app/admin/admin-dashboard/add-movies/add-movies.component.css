@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;500&display=swap");
+
+.container {
+  font-family: "Arima", cursive;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f2ebe9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+}
+
+button {
+  text-align: center;
+  background-color: #293462;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+  border-radius: 30px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="assets/logo.png" alt="" /> Book Your Show</a
+      >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Admin/Admin_Login.html">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Customer/Customer_login.html">Customer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="Home-page">
+      <div class="row" id="main-page">
+        <div class="col-lg-6">
+          <h1>Book Your Show</h1>
+          <p>Watch Hand pick cinema, curated with love 🍿</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="image-main" src="assets/PPop-.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Poppins:wght@200&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Arima", cursive;
+      }
+      body {
+        background-color: #f2ebe9;
+      }
+      nav {
+        background-color: #293462;
+      }
+      nav a {
+        color: white !important;
+      }
+      li {
+        margin: 10px;
+        border-radius: 10px;
+        width: 100px;
+        text-align: center;
+        background-color: #d61c4e;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .image-main {
+        height: 100%;
+        width: 100%;
+        transform: rotate(20deg);
+      }
+      #main-page {
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      .col-lg-6 {
+        text-align: center;
+        padding: 30px;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class="container">
+  <h2 style="text-align: center">Up Coming Movie List</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Cast</th>
+        <th scope="col">Date</th>
+        <th scope="col">Total Ticket</th>
+        <th scope="col">Language</th>
+        <th scope="col">Price</th>
+        <th scope="col">Show Time</th>
+        <th scope="col">Movie Poster</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mov of movie">
+        <th scope="row">{{ mov.movieid }}</th>
+        <td>{{ mov.title }}</td>
+        <td>{{ mov.cast }}</td>
+        <td>{{ mov.date }}</td>
+        <td>{{ mov.totalTicket }}</td>
+        <td>{{ mov.language }}</td>
+        <td>{{ mov.price }}</td>
+        <td>{{ mov.showTime }}</td>
+        <td>
+          <img
+            style="
+              width: 50px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            "
+            src="{{ mov.image }}"
+            alt="img"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

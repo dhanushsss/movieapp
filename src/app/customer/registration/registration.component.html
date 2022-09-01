@@ -1,0 +1,133 @@
+<app-nav-bar></app-nav-bar>
+<h2>SignUp</h2>
+<div class="tag1">
+  <div class="row">
+    <div class="col-lg-6 left-tag">
+      <img
+        src="https://images.pexels.com/photos/942317/pexels-photo-942317.jpeg?cs=srgb&dl=pexels-tim-mossholder-942317.jpg&fm=jpg"
+      />
+    </div>
+    <div class="col-lg-6">
+      <form #loginform="ngForm" (ngSubmit)="registration()">
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail4"
+          placeholder="Email"
+          [(ngModel)]="user.email"
+          name="email"
+          required
+          pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$"
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
+        />
+
+        <div *ngIf="email.errors && email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.['required']"
+            >Email is required</small
+          >
+          <small class="text-danger" *ngIf="email.errors?.['pattern']"
+            >Enter the valid email
+          </small>
+        </div>
+        <br />
+        <input
+          id="UserName"
+          name="userName"
+          placeholder="UserName"
+          class="form-control"
+          type="text"
+          [(ngModel)]="user.userName"
+          name="userName"
+          required
+          minlength="4"
+          required
+          #userName="ngModel"
+          [class.is-invalid]="userName.invalid && userName.touched"
+        />
+        <small
+          class="text-danger"
+          [class.d-none]="userName.valid || userName.untouched"
+          >UserName is required</small
+        >
+        <br />
+        <input
+          id="MobileNumber"
+          name="mobileNumber"
+          placeholder="Mobile Number"
+          class="form-control"
+          type="text"
+          [(ngModel)]="user.mobileNumber"
+          name="mobileNumber"
+          required
+          minlength="10"
+          maxlength="10"
+          #MobileNumber="ngModel"
+          [class.is-invalid]="MobileNumber.invalid && MobileNumber.touched"
+        />
+        <small
+          class="text-danger"
+          [class.d-none]="MobileNumber.valid || MobileNumber.untouched"
+          >MobileNumber is required</small
+        >
+        <br />
+        <input
+          id="Password"
+          name="Password"
+          placeholder="Password"
+          class="form-control"
+          required="required"
+          type="password"
+          [(ngModel)]="user.password"
+          name="password"
+          required
+          minlength="6"
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+        />
+        <small
+          class="text-danger"
+          [class.d-none]="password.valid || password.untouched"
+          >Password is required</small
+        >
+        <br />
+
+        <div class="form-row">
+          <div class="form-group">
+            <div class="form-group">
+              <div class="forxm-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck2"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck2">
+                  <small
+                    >By clicking Submit, you agree to our Terms & Conditions,
+                    Visitor Agreement and Privacy Policy.</small
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <button
+            [disabled]="loginform.form.invalid"
+            type="submit"
+            class="btn btn-danger"
+          >
+            Submit
+          </button>
+
+          <label></label>
+          <button type="button" class="btn btn-danger" routerLink="/">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

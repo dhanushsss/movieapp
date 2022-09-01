@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand">Ticket Booking Management</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div *ngIf="theatre">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <button
+            routerLink="/admin-dashboard/movie/{{ theatre.theatreid }}"
+            class="button"
+          >
+            All Movies
+          </button>
+        </li>
+        <li>
+          <button
+            routerLink="/admin-dashboard/add-movies/{{ theatre.theatreid }}"
+            class="button"
+          >
+            Add Movies
+          </button>
+        </li>
+      </ul>
+      <div>
+        <button routerLink="/revenue/{{ theatre.theatreid }}" class="button">
+          Revenue
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

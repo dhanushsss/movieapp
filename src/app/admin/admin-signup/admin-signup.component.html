@@ -1,0 +1,81 @@
+<app-nav-bar></app-nav-bar>
+<div class="main-tag">
+  <div class="sub">
+    <form #loginform="ngForm" (ngSubmit)="registration()">
+      <h1>Theatre Registration</h1>
+      <input
+        type="email"
+        [(ngModel)]="theatre.theatreEmail"
+        name="theatreEmail"
+        required
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        placeholder="Theatre Mail ID"
+      />
+      <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small> -->
+      <div *ngIf="email.errors && email.invalid && email.touched">
+        <small class="text-danger" *ngIf="email.errors?.['required']"
+          >Email is required</small
+        >
+        <small class="text-danger" *ngIf="email.errors?.['pattern']"
+          >Enter the valid email
+        </small>
+      </div>
+
+      <input
+        id="theatreName"
+        name="theatreName"
+        placeholder="Theatre Name"
+        class="form-control"
+        type="text"
+        [(ngModel)]="theatre.theatreName"
+        name="theatreName"
+        required
+        minlength="4"
+        required
+        #theatreName="ngModel"
+        [class.is-invalid]="theatreName.invalid && theatreName.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="theatreName.valid || theatreName.untouched"
+        >UserName is required</small
+      >
+
+      <input
+        id="Password"
+        name="Password"
+        placeholder="Password"
+        class="form-control"
+        required="required"
+        type="password"
+        [(ngModel)]="theatre.password"
+        name="password"
+        required
+        minlength="5"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="password.valid || password.untouched"
+        >Password is required</small
+      >
+
+      <div class="form-row">
+        <button
+          [disabled]="loginform.form.invalid"
+          type="submit"
+          class="btn btn-danger"
+        >
+          Submit
+        </button>
+
+        <button type="button" class="btn btn-danger" routerLink="/admin">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

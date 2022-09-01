@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;500&display=swap");
+.main-ta {
+  font-family: "Arima", cursive;
+}
+.hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Revenue-sub {
+  width: 50%;
+  background-color: #293462;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr {
+  background-color: #fff !important;
+}
+
+.theatre-revenue {
+  width: 50%;
+  background-color: #d61c4e;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
