@@ -6,6 +6,7 @@ import { Movie } from '../models/movie';
 
 const baseUrl = 'http://localhost:8080/SumBooking';
 const bookUrl = 'http://localhost:8080/addBooking';
+const getURL = 'http://localhost:8080/BookingId';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,9 @@ export class BookingService {
 
   public saveTotalCost(book: Booking): Observable<Booking> {
     return this._http.post<Booking>(`${bookUrl}`, book);
+  }
+
+   findBookingId(bookingid:number):Observable<Booking>{
+    return this._http.get<Booking>(`${getURL}/${bookingid}`);
   }
 }

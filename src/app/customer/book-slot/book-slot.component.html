@@ -1,14 +1,14 @@
 <app-nav-bar></app-nav-bar>
-<div class="main">
+<div class="main-tag">
   <div class="sub" *ngIf="movie">
     <h1>Overview</h1>
     <img style="height: 200px; width: 200px" src="{{ movie.image }}" alt="" />
-    <h3>Theatre Name : {{ movie.theatre.theatreName }}</h3>
-    <h3>Movie Name : {{ movie.title }}</h3>
-    <h3>Price : {{ movie.price }}</h3>
-    <h3>Show Time : {{ movie.showTime }}</h3>
-    <h3>Language : {{ movie.language }}</h3>
-    <h3>Language : {{ movie.date }}</h3>
+    <h5>Theatre Name  :  {{ movie.theatre.theatreName }}</h5>
+    <h5>Movie Name  :  {{ movie.title }}</h5>
+    <h5>Price  :  {{ movie.price }}</h5>
+    <h5>Show Time  :  {{ movie.showTime }}</h5>
+    <h5>Language  :  {{ movie.language }}</h5>
+    <h5>Language  :  {{ movie.date }}</h5>
     <form (ngSubmit)="saveTotalCost()">
       <label>Total Number of ticket </label>
       <input

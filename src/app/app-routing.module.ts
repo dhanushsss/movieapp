@@ -10,6 +10,7 @@ import { BookSlotComponent } from './customer/book-slot/book-slot.component';
 import { FeedbackComponent } from './customer/feedback/feedback.component';
 import { LoginComponent } from './customer/login/login.component';
 import { MainPageComponent } from './customer/main-page/main-page.component';
+import { OverviewComponent } from './customer/overview/overview.component';
 import { PaymentComponent } from './customer/payment/payment.component';
 import { RegistrationComponent } from './customer/registration/registration.component';
 import { ThankyouComponent } from './customer/thankyou/thankyou.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'sign-up', component: RegistrationComponent },
   { path: 'main-page/:customerid', component: MainPageComponent },
   { path: 'book-slot/:customerid/:movieid', component: BookSlotComponent },
-  { path: 'customer-payment/:customerid/:movieid', component: PaymentComponent },
+  { path: 'customer-payment/:customerid/:movieid/:bookingid', component: PaymentComponent },
+  { path: 'overview/:customerid/:bookingid', component: OverviewComponent },
   { path: 'customer-feedback/:customerid', component: FeedbackComponent },
   { path: 'ThankYou', component: ThankyouComponent },
 

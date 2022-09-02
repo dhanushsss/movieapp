@@ -19,6 +19,7 @@ import { AdminSignupComponent } from './admin/admin-signup/admin-signup.componen
 import { PaymentComponent } from './customer/payment/payment.component';
 import { FeedbackComponent } from './customer/feedback/feedback.component';
 import { ThankyouComponent } from './customer/thankyou/thankyou.component';
+import { OverviewComponent } from './customer/overview/overview.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ThankyouComponent } from './customer/thankyou/thankyou.component';
     AdminSignupComponent,
     PaymentComponent,
     FeedbackComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,

@@ -5,22 +5,68 @@
   box-sizing: border-box;
   font-family: "Arima", cursive;
 }
+img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+    text-align: center;
+}
 
-.main {
+
+.main-tag {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .sub {
-  padding: 40px;
-  background-color: #f2ebe9;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9c5;
+  padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-img{
+.money {
+  font-size: 100px;
+}
+button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor:pointer;
+
+}
+button:hover{
+  background-color: #D61C4E !important;
+}
+
+
+h5{
     margin: 5px;
 }
-h3{
-    margin: 5px;
+
+input{
+  margin-left: 10px;
+  width: 150px;
+}
+
+button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor:pointer;
+
+}
+button:hover{
+  background-color: #D61C4E !important;
 }

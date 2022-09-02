@@ -35,6 +35,8 @@ export class BookSlotComponent implements OnInit {
     this.movie.movieid = this.movieid;
     this.customerid = Number(this.actRoute.snapshot.params['customerid']);
     this.customer.customerid = this.customerid;
+
+  
   }
   getUserById(customerid: any) {
     this.registrationService.getUserByid(customerid).subscribe({
@@ -62,8 +64,8 @@ export class BookSlotComponent implements OnInit {
     this.book.totalCost=this.book.totalCost;
     this.bookingService
       .saveTotalCost(this.book)
-      .subscribe((data) => (this.book = data)); 
-    this.router.navigateByUrl(`customer-payment/${this.customer.customerid}/${this.movieid}`);
+      .subscribe((data) => (console.log(this.book.bookingid) , this.book = data ,    this.router.navigateByUrl(`customer-payment/${this.customer.customerid}/${this.movieid}/${this.book.bookingid}`))); 
+      
   }
 
   priceCalc(): number{

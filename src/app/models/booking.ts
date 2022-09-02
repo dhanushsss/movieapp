@@ -2,7 +2,7 @@ import { Movie } from '../models/movie';
 import { User } from './user';
 
 export class Booking {
-  Bookingid: number;
+  bookingid: number;
   showtime: string;
   totalNoTicket: number;
   totalCost: number;

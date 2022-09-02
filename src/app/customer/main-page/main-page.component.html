@@ -1,7 +1,12 @@
 <app-nav-bar></app-nav-bar>
 <div class="movie-tag">
   <div class="row">
-    <div class="col-lg-12 overflow-auto" style="height: 40rem">
+
+    <div class="col-lg-06">
+      <img  src="../../../assets/panda.png" style="height: 40rem; " alt="">
+      
+    </div>
+    <div class="col-lg-06 overflow-auto" style="height: 40rem">
       <div class="card" *ngFor="let movie of movie">
         <div *ngIf="customer"></div>
         <img
@@ -55,17 +60,22 @@
             </a>
             {{ movie.price }}
           </p>
-          <!-- <p class="price">
+          <p class="theatreName">
             <a
               style="
                 color: #fff80a;
                 text-shadow: 2px 2px 8px #000;
                 padding-right: 10px;
               "
-              >Theatre Name :
+              >Theatre Name  :
             </a>
-            {{ movie }}
-          </p> -->
+            {{ movie.theatre.theatreName }}
+          </p>
+
+
+
+          
+          
 
           <button
             class="Button-tag"
