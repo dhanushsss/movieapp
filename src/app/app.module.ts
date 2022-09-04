@@ -20,6 +20,7 @@ import { PaymentComponent } from './customer/payment/payment.component';
 import { FeedbackComponent } from './customer/feedback/feedback.component';
 import { ThankyouComponent } from './customer/thankyou/thankyou.component';
 import { OverviewComponent } from './customer/overview/overview.component';
+import { HistoryComponent } from './customer/history/history.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { OverviewComponent } from './customer/overview/overview.component';
     PaymentComponent,
     FeedbackComponent,
     ThankyouComponent,
-    OverviewComponent
+    OverviewComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

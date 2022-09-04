@@ -8,6 +8,7 @@ import { AdminSignupComponent } from './admin/admin-signup/admin-signup.componen
 import { RevenueComponent } from './admin/revenue/revenue.component';
 import { BookSlotComponent } from './customer/book-slot/book-slot.component';
 import { FeedbackComponent } from './customer/feedback/feedback.component';
+import { HistoryComponent } from './customer/history/history.component';
 import { LoginComponent } from './customer/login/login.component';
 import { MainPageComponent } from './customer/main-page/main-page.component';
 import { OverviewComponent } from './customer/overview/overview.component';
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'sign-up', component: RegistrationComponent },
   { path: 'main-page/:customerid', component: MainPageComponent },
+  { path: 'booking-history/:customerid', component: HistoryComponent },
+  
   { path: 'book-slot/:customerid/:movieid', component: BookSlotComponent },
   { path: 'customer-payment/:customerid/:movieid/:bookingid', component: PaymentComponent },
   { path: 'overview/:customerid/:bookingid', component: OverviewComponent },

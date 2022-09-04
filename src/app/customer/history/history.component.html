@@ -1,0 +1,43 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2 style="text-align: center">Booking History</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Booking Id</th>
+        <th scope="col">Movie Name</th>
+        <th scope="col">Total Cost Paid</th>
+        <th scope="col">Date</th>
+        <th scope="col">Total Ticket</th>
+        <th scope="col">Theatre Name</th>
+
+        <th scope="col">Show Time</th>
+        <th scope="col">Movie Poster</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of Bookings">
+        <th scope="row">{{ book.bookingid }}</th>
+        <td>{{ book.movies.title }}</td>
+        <td>{{ book.totalCost }}</td>
+        <td>{{ book.movies.date }}</td>
+        <td>{{ book.movies.totalTicket }}</td>
+        <td>{{ book.movies.theatre.theatreName }}</td>
+
+        <td>{{ book.movies.showTime }}</td>
+        <td>
+          <img
+            style="
+              width: 50px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            "
+            src="{{ book.movies.image }}"
+            alt="img"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,4 +1,14 @@
-<app-nav-bar></app-nav-bar>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div *ngIf="customer">
+    <img class="logo" src="../../assets/logo.png" alt="" /> 
+  <a style="color: #fff !important;" class="navbar-brand" href="#">Book Your Show </a>
+  <button
+  routerLink="/booking-history/{{customer.customerid}}"
+   style="border: 0; padding:10px; margin-left:  100px;">Booking History</button>
+  </div>
+  
+</nav>
+
 <div class="movie-tag">
   <div class="row">
 
