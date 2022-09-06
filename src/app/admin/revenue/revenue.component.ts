@@ -15,6 +15,7 @@ export class RevenueComponent implements OnInit {
   theatre: Theatre;
   booking: Booking[];
   total: any;
+  totalMovie: any;
   movie: Movie[];
   constructor(
     private bookingservice: BookingService,
@@ -23,16 +24,9 @@ export class RevenueComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.getTheatreById(this.actRoute.snapshot.params['theatreid']);
     this.getById(this.actRoute.snapshot.params['theatreid']);
   }
-  // getTheatreById(theatreid: any) {
-  //   this.movieService.getMovieById(theatreid).subscribe({
-  //     next: (data) => {
-  //       console.log(data), (this.movie = data);
-  //     },
-  //   });
-  // }
+
   getById(theatreid: any) {
     this.bookingservice.getBookingsByBookingidtotal(theatreid).subscribe({
       next: (data) => {

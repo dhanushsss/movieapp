@@ -46,7 +46,7 @@ const routes: Routes = [
     component: AddMoviesComponent,
   },
   {
-    path: 'revenue/:theatreid',
+    path: 'revenue/:theatreid/:movieid',
     component: RevenueComponent,
   },
 ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Movie } from 'src/app/models/movie';
 import { Theatre } from 'src/app/models/theatre';
 import { TheatreService } from 'src/app/services/theatre.service';
 
@@ -10,6 +11,7 @@ import { TheatreService } from 'src/app/services/theatre.service';
 })
 export class AdminDashboardComponent implements OnInit {
   theatre: Theatre;
+  movie:Movie;
   constructor(
     private route: Router,
     public actRoute: ActivatedRoute,

@@ -1,18 +1,22 @@
 <app-nav-bar></app-nav-bar>
 
 <div class="main-tag">
-    <div class="sub" *ngIf="book">
-        <img style="width: 200px; height:200px; border-radius: 50%;" src="{{book.movies.image}}" alt="">
-        <h5>Booking Id : {{book.bookingid}}</h5>
-        <h5>Name : {{book.customer.userName}}</h5>
-        <h5> Theatre Name : {{book.movies.theatre.theatreName}}</h5>
-        <h5>Movie Name : {{book.movies.title}}</h5>
-        <h5>Show Time : {{book.movies.showTime}}</h5>
-        <h5>Show Date : {{book.movies.date}}</h5>
-        <h5>Total No of Ticket : {{book.totalNoTicket}}</h5>
-        <h5>Amount Paid : {{book.totalCost}}</h5>
-        <h5>Phone Number : {{book.customer.mobileNumber}}</h5>
-        
-        <button (click)="route()">Submit</button>
-    </div>
+  <div class="sub" *ngIf="book">
+    <img
+      style="width: 200px; height: 200px; border-radius: 50%"
+      src="{{ book.movies.image }}"
+      alt=""
+    />
+    <h5>Booking Id : {{ book.bookingid }}</h5>
+    <h5>Name : {{ book.customer.userName }}</h5>
+    <h5>Theatre Name : {{ book.movies.theatre.theatreName }}</h5>
+    <h5>Movie Name : {{ book.movies.title }}</h5>
+    <h5>Show Time : {{ book.movies.showTime }}</h5>
+    <h5>Show Date : {{ book.movies.date }}</h5>
+    <h5>Total No of Ticket : {{ book.totalNoTicket }}</h5>
+    <h5>Amount Paid : {{ book.totalCost }}</h5>
+    <h5>Phone Number : {{ book.customer.mobileNumber }}</h5>
+
+    <button (click)="route()">Submit</button>
+  </div>
 </div>

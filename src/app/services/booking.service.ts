@@ -8,7 +8,8 @@ import { User } from '../models/user';
 const baseUrl = 'http://localhost:8080/SumBooking';
 const bookUrl = 'http://localhost:8080/addBooking';
 const getURL = 'http://localhost:8080/BookingId';
-const getCustomer='http://localhost:8080/getByCustomerId'
+const getCustomer = 'http://localhost:8080/getByCustomerId';
+const getMovieRevenue = 'http://localhost:8080/movieTotal';
 
 @Injectable({
   providedIn: 'root',
@@ -23,12 +24,14 @@ export class BookingService {
     return this._http.post<Booking>(`${bookUrl}`, book);
   }
 
-   findBookingId(bookingid:number):Observable<Booking>{
+  findBookingId(bookingid: number): Observable<Booking> {
     return this._http.get<Booking>(`${getURL}/${bookingid}`);
   }
 
-  getCustomer(customerid:number):Observable<Booking[]>{
+  getCustomer(customerid: number): Observable<Booking[]> {
     return this._http.get<Booking[]>(`${getCustomer}/${customerid}`);
   }
-
+  // getMovieByIdTotal(movieid: number): Observable<Booking> {
+  //   return this._http.get<Booking>(`${getMovieRevenue}/${movieid}`);
+  // }
 }
